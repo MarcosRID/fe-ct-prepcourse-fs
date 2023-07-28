@@ -19,7 +19,7 @@ function crearUsuario() {
 			this.password = password;
 		}
 		saludar() {
-			return "Hola, mi nombre es " + this.nombre ;
+			return `Hola, mi nombre es  ${this.nombre}` ;
 		}
 	}
    

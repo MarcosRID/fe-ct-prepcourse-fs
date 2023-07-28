@@ -49,11 +49,13 @@ function agregarPropiedad(objeto, propiedad) {
 	// Retornar el objeto.
 	// Tu código:
 
-	Object.defineProperty(objeto, propiedad, {
+	objeto[propiedad]  = null;
+
+	/*Object.defineProperty(objeto, propiedad, {
 		value: null,
 		writable: true, // Sinonimo de Setter
 		enumerable: true, // Visibilidad
-	});
+	});*/
 
 	return objeto;
 }
@@ -136,9 +138,12 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
 	// Retornar el arreglo.
 	// Tu código:
 
-	for (let index = 0; index < objetoMuchosUsuarios.length; index++) {
-		for (const key in objetoMuchosUsuarios[index]) {
-			if (objetoMuchosUsuarios[index].hasOwnProperty("esPremium")) {
+	for (let index = 0; index < objetoMuchosUsuarios.length; index++) 
+	{
+		for (const key in objetoMuchosUsuarios[index]) 
+		{
+			if (objetoMuchosUsuarios[index].hasOwnProperty("esPremium")) 
+			{
 				objetoMuchosUsuarios[index].esPremium = true;
 			}
 		}
@@ -177,11 +182,8 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
 
 	objetoProducto.calcularPrecioDescuento = function calcularPrecioDescuento() 
 	{
-
 		return this.precio - (this.precio * this.porcentajeDeDescuento);
 	} 
-	console.log(objetoProducto)
-	console.log(objetoProducto.calcularPrecioDescuento())
 
 	return objetoProducto
 }

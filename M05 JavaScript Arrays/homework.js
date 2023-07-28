@@ -69,7 +69,7 @@ function dePalabrasAFrase(palabras) {
 
 	return string;
 }
-console.log(dePalabrasAFrase(["Henry", "que", "haces"]));
+
 
 function arrayContiene(array, elemento) {
 	// Verifica si el elemento existe dentro del arreglo recibido.
